@@ -94,3 +94,54 @@ body,
 {
     background: #ffffff99;
 }
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* This will space out the items evenly */
+  }
+  
+  .navbar li {
+    padding: 8px; /* Adjust the padding as needed */
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333; /* Change the color as needed */
+  }
+  
+  /* Add a hover effect for links */
+  .navbar a:hover {
+    color: #000; /* Change the hover color as needed */
+  }
+
+  .fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+  }
+  
+  .bg {
+    background: #d0d0d0;
+  }
+  
+  .fullscreen.notready {
+    color: #606060;
+  }
+  
+  .fullscreen.loaded > div {
+    cursor: pointer;
+  }
+  
+  .fullscreen.clicked {
+    pointer-events: none;
+    opacity: 0;
+  }
