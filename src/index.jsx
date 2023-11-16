@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavBar } from './NavBar.jsx'; 
 import { Overlay } from './home/Overlay.jsx';
 import Home from './home/home.jsx';
+import HomePage from './HomePage.jsx'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 
@@ -16,7 +17,10 @@ root.render(
    <NavBar/> 
     <Routes>
       <Route path="/" element={
-        <><Home /><Overlay /></>
+        <>
+        <HomePage/>
+        {/* <Home /><Overlay /> */}
+        </>
       } />
       <Route path="/game" element={
         <KeyboardControls
