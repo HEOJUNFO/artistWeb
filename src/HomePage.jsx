@@ -74,14 +74,14 @@ const MessageInbox = () => (
     borderRadius: '8px',
     width: '30%'
   }}>
-    <h2 style={{ borderBottom: '2px solid #007bff' }}>Messages</h2> {/* Added bottom border to title */}
-    <ul style={{ listStyle: 'none', padding: 0 }}> {/* Removed list bullets */}
+    <h2 style={{ borderBottom: '2px solid #007bff' }}>Messages</h2> 
+    <ul style={{ listStyle: 'none', padding: 0 }}> 
       <li style={{ 
         padding: '10px',
-        borderBottom: '1px solid #ddd', // Added dividers
-        cursor: 'pointer' // Added cursor to indicate clickability
+        borderBottom: '1px solid #ddd', 
+        cursor: 'pointer'
       }}>
-        <img src="/icons/inbox.svg" alt="Inbox" style={{ marginRight: '5px' }} /> {/* Added icons */}
+        <img src="/icons/inbox.svg" alt="Inbox" style={{ marginRight: '5px' }} /> 
         Inbox
       </li>
       <li style={{
