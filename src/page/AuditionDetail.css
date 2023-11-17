@@ -1,0 +1,67 @@
+.audition-detail-container {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    background: #fff3e0; /* Warm background */
+    border: 1px solid #f08c00; /* Vibrant border */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+  }
+  
+  .audition-detail-container::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    height: 5px;
+    background: linear-gradient(to right, #f08c00, #ffc107); /* Gradient border top */
+  }
+  
+  .audition-detail-container h1 {
+    font-size: 2.5rem;
+    color: #5d4037; /* Darker color for title */
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif; /* More elegant font for titles */
+  }
+  
+  .audition-detail-container p {
+    font-size: 1rem;
+    color: #6d4c41; /* Soft color for text */
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Distinctive style for date and location */
+  .audition-detail-container p:nth-of-type(1),
+  .audition-detail-container p:nth-of-type(2) {
+    font-weight: bold;
+    color: #f08c00; /* Color that stands out */
+  }
+  
+  /* Hover effect for the whole container */
+  .audition-detail-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: #ffc107; /* Lighter border on hover */
+  }
+
+  .audition-detail-container .apply-button {
+    display: block; /* Block level for better click area */
+    width: 100%; /* Full width of the container */
+    padding: 1rem; /* Padding for better touch */
+    background-color: #f08c00; /* Vibrant button color */
+    color: #fff; /* Contrast color for the text */
+    font-size: 1rem; /* Readable font size */
+    font-weight: bold; /* Bold text for importance */
+    border: none; /* No border for a cleaner look */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Cursor to indicate it's clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .audition-detail-container .apply-button:hover {
+    background-color: #e67e22; /* Slightly darker on hover to invite action */
+  }

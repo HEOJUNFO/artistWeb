@@ -1,3 +1,6 @@
+import { AuditionsAnnouncements } from './page/AuditionsAnnouncements';
+import { Link } from 'react-router-dom';
+
 const Banner = () => (
   <div className="banner" style={{ width: '100%' }}> 
     <img src="/banner.png" alt="Banner" style={{ width: '100%', height: 'auto' }} />
@@ -29,13 +32,17 @@ const BoardSection = ({ title, feature, posts, deadlines }) => (
     width: '30%' 
   }}>
     <div style={{ 
+      display: 'flex', 
+      justifyContent: 'space-between', 
+      alignItems: 'center',
       marginBottom: '20px', 
       borderBottom: '1px solid #eee' 
     }}>
       <h2 style={{ 
         fontSize: '1.5em', 
         fontWeight: 'bold', 
-        color: '#333' 
+        color: '#333',
+        margin: 0 
       }}>{title}</h2>
       {feature && <span style={{ 
         fontWeight: 'bold', 
@@ -45,6 +52,8 @@ const BoardSection = ({ title, feature, posts, deadlines }) => (
     <ul>
       {posts.map((post, index) => (
         <li key={index} style={{ 
+          display: 'flex',
+          justifyContent: 'space-between',
           padding: '10px 0', 
           borderBottom: '1px solid #eee' 
         }}>
@@ -81,7 +90,7 @@ const MessageInbox = () => (
         borderBottom: '1px solid #ddd', 
         cursor: 'pointer'
       }}>
-        <img src="/icons/inbox.svg" alt="Inbox" style={{ marginRight: '5px' }} /> 
+     
         Inbox
       </li>
       <li style={{
@@ -89,14 +98,14 @@ const MessageInbox = () => (
         borderBottom: '1px solid #ddd',
         cursor: 'pointer'
       }}>
-        <img src="/icons/outbox.svg" alt="Outbox" style={{ marginRight: '5px' }} />
+ 
         Outbox
       </li>
       <li style={{
         padding: '10px',
         cursor: 'pointer'
       }}>
-        <img src="/icons/activity.svg" alt="Activity" style={{ marginRight: '5px' }} />
+ 
         Activity
       </li>
     </ul>
@@ -107,41 +116,37 @@ const HomePage = () => (
   <div className="home-page">
     <Banner />
     <div className="middle-section1" style={{ display: 'flex', justifyContent: 'space-around' }}>
-    <BoardSection
-  title="오디션 및 공고"
-  posts={["게시글 1", "게시글 2", "게시글 3"]}
-  deadlines={["[xx.xx.xx]", "[xx.xx.xx]", "[xx.xx.xx]"]} 
-/>
+    <AuditionsAnnouncements isHomePage={true} />
       <BoardSection
         title="멘토링 서비스"
         feature="1회 무료"
-        posts={["게시글 4", "게시글 5", "게시글 6"]} 
+        posts={["준비중..."]} 
       />
       <BoardSection
         title="공지사항"
-        posts={["게시글 7", "게시글 8", "게시글 9"]} 
+        posts={["준비중..."]} 
       />
     </div>
     <div className="middle-section2" style={{ display: 'flex', justifyContent: 'space-around' }}>
 
       <BoardSection
         title="홍보글"
-        posts={["게시글 1", "게시글 2", "게시글 3"]} 
+        posts={["준비중..."]} 
       />
       <BoardSection
         title="협업 글"
-        posts={["게시글 4", "게시글 5", "게시글 6"]} 
+        posts={["준비중..."]} 
       />
    <MessageInbox />
     </div>
   <div className="middle-section3" style={{ display: 'flex', justifyContent: 'space-around' }}>
     <BoardSection
         title="구입판매 글"
-        posts={["게시글 7", "게시글 8", "게시글 9"]} 
+        posts={["준비중..."]} 
       />
         <BoardSection
         title="자유 게시판"
-        posts={["게시글 7", "게시글 8", "게시글 9"]} 
+        posts={["준비중..."]} 
       />
     <MiniBanner />
    </div>

@@ -12,8 +12,8 @@ const red = new THREE.Color('#900909')
 export default function Home(props) {
   return (
     <Canvas dpr={[1, 2]} camera={{ position: [-20, 20, 20], fov: 25 }}>
-      <color attach="background" args={['#d0d0d0']} />
-      <fog attach="fog" args={['#d0d0d0', 5, 10]} />
+      <color attach="background" args={['#fffff0']} />
+      <fog attach="fog" args={['#fffff0', 5, 10]} />
       <Suspense fallback={null}>
         <ambientLight intensity={2} />
         <directionalLight position={[10, 10, 0]} intensity={1.5} />

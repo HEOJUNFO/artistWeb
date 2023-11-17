@@ -4,6 +4,7 @@ export function Overlay() {
     const loaded = useStore((state) => state.loaded)
     const clicked = useStore((state) => state.clicked)
     const api = useStore((state) => state.api)
+
     return (
       <>
         <div className={`fullscreen bg ${loaded ? 'loaded' : 'notready'} ${clicked && 'clicked'}`}>
