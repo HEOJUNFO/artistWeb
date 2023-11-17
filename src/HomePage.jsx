@@ -75,7 +75,7 @@ const BoardSection = ({ title, feature, posts, deadlines }) => (
 
 const MessageInbox = () => (
   <div className="message-inbox" style={{
-    background: '#ecf5fd', // Changed to a light blue to imply messaging
+    background: '#ecf5fd', 
     padding: '20px',
     margin: '10px',
     border: '1px solid #ddd',
