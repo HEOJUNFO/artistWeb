@@ -1,0 +1,41 @@
+.submit-audition-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-audition-container h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .submit-audition-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .submit-audition-form input,
+  .submit-audition-form textarea,
+  .submit-audition-form button {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .submit-audition-form button {
+    background-color: #5cb85c;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-audition-form button:hover {
+    background-color: #4cae4c;
+  }

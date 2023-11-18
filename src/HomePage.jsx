@@ -1,5 +1,10 @@
 import { AuditionsAnnouncements } from './page/AuditionsAnnouncements';
-import { Link } from 'react-router-dom';
+import { MentoringPage } from './page/MentoringPage.jsx';
+import { Announcement } from './page/Announcement.jsx';
+import { CooperationPage } from './page/CooperationPage.jsx';
+import { BuysellgPage } from './page/BuysellPage.jsx';
+import { FreePage } from './page/FreePage.jsx';
+import { PromotionPage } from './page/PromotionPage.jsx';
 
 const Banner = () => (
   <div className="banner" style={{ width: '100%' }}> 
@@ -117,37 +122,18 @@ const HomePage = () => (
     <Banner />
     <div className="middle-section1" style={{ display: 'flex', justifyContent: 'space-around' }}>
     <AuditionsAnnouncements isHomePage={true} />
-      <BoardSection
-        title="멘토링 서비스"
-        feature="1회 무료"
-        posts={["준비중..."]} 
-      />
-      <BoardSection
-        title="공지사항"
-        posts={["준비중..."]} 
-      />
+    <MentoringPage isHomePage={true} />
+    <Announcement isHomePage={true} />
     </div>
     <div className="middle-section2" style={{ display: 'flex', justifyContent: 'space-around' }}>
 
-      <BoardSection
-        title="홍보글"
-        posts={["준비중..."]} 
-      />
-      <BoardSection
-        title="협업 글"
-        posts={["준비중..."]} 
-      />
+      <PromotionPage isHomePage={true} />
+      <CooperationPage isHomePage={true} />
    <MessageInbox />
     </div>
   <div className="middle-section3" style={{ display: 'flex', justifyContent: 'space-around' }}>
-    <BoardSection
-        title="구입판매 글"
-        posts={["준비중..."]} 
-      />
-        <BoardSection
-        title="자유 게시판"
-        posts={["준비중..."]} 
-      />
+      <BuysellgPage isHomePage={true} />
+      <FreePage isHomePage={true} />
     <MiniBanner />
    </div>
   </div>
