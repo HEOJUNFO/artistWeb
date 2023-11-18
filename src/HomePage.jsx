@@ -88,7 +88,7 @@ const MessageInbox = () => (
     borderRadius: '8px',
     width: '30%'
   }}>
-    <h2 style={{ borderBottom: '2px solid #007bff' }}>Messages</h2> 
+    <h2 style={{ borderBottom: '2px solid #007bff' }}>편지함</h2> 
     <ul style={{ listStyle: 'none', padding: 0 }}> 
       <li style={{ 
         padding: '10px',
@@ -96,7 +96,7 @@ const MessageInbox = () => (
         cursor: 'pointer'
       }}>
      
-        Inbox
+        받은편지함
       </li>
       <li style={{
         padding: '10px',
@@ -104,14 +104,14 @@ const MessageInbox = () => (
         cursor: 'pointer'
       }}>
  
-        Outbox
+        보낸편지함
       </li>
       <li style={{
         padding: '10px',
         cursor: 'pointer'
       }}>
  
-        Activity
+        활동내역
       </li>
     </ul>
   </div>

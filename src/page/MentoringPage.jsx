@@ -20,21 +20,23 @@ export function MentoringPage({ isHomePage }) {
     return (
         <div className={containerClass}>
             <h1 className="audition-link-header">
-                <Link to="/mentoring-services" className="audition-link">멘토링 서비스</Link>
+                <Link to="/mentoring" className="audition-link">멘토링 서비스</Link>
             </h1>
             <ul className="auditions-list">
                 {displayedMentoringServices.map(service => (
-                    <li key={service.id} className="audition-item">
-                        <Link to={`/mentoring-services/${service.id}`} className="audition-link">
+                     <Link to={`/auditions/${service.id}`} key={service.id} className="audition-link">
+                    <li  className="audition-item">
+                       
                             <div className="audition-header">
                                 <h2 className="audition-title">{service.title}</h2>
                                 <p className="audition-deadline">마감일: {service.date}</p>
                             </div>
-                        </Link>
+                       
                         {!isHomePage && (
                             <p>위치: {service.location}</p>
                         )}
                     </li>
+                    </Link>
                 ))}
             </ul>
             {!isHomePage && (

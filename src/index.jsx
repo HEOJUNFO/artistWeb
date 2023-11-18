@@ -35,7 +35,7 @@ root.render(
         <Route path="/mentoring" element={
         <MentoringPage />
       } />
-       <Route path="/announcemnt" element={
+       <Route path="/announcement" element={
         <Announcement />
       } />
         <Route path="/promotion" element={

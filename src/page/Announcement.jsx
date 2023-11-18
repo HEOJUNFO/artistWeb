@@ -22,23 +22,25 @@ export function Announcement({ isHomePage }) {
         <div className={containerClass}>
             <h1 className="audition-link-header">
               
-                <Link to="/announcements" className="audition-link">공지사항</Link>
+                <Link to="/announcement" className="audition-link">공지사항</Link>
             </h1>
             <ul className="auditions-list">
                 {displayedAnnouncements.map(announcement => (
-                    <li key={announcement.id} className="audition-item">
+                       <Link to={`/auditions/${announcement.id}`}  key={announcement.id} className="audition-link">
+                    <li className="audition-item">
                      
-                        <Link to={`/announcements/${announcement.id}`} className="audition-link">
+                     
                             <div className="audition-header">
                                 <h2 className="audition-title">{announcement.title}</h2>
                                 <p className="audition-deadline">{announcement.date}</p>
                             </div>
-                        </Link>
+                     
                         {!isHomePage && (
-                            // Kept the original location display
+                          
                             <p>위치: {announcement.location}</p>
                         )}
                     </li>
+                    </Link>
                 ))}
             </ul>
             {!isHomePage && (

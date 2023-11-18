@@ -18,21 +18,23 @@ export function PromotionPage({ isHomePage }) {
     return (
         <div className={containerClass}>
             <h1 className="audition-link-header">
-                <Link to="/promotions" className="audition-link">홍보</Link>
+                <Link to="/promotion" className="audition-link">홍보</Link>
             </h1>
             <ul className="auditions-list">
                 {displayedPromotions.map(promotion => (
-                    <li key={promotion.id} className="audition-item">
-                        <Link to={`/promotions/${promotion.id}`} className="audition-link">
+                        <Link to={`/auditions/${promotion.id}`}  key={promotion.id} className="audition-link">
+                    <li className="audition-item">
+                    
                             <div className="audition-header">
                                 <h2 className="audition-title">{promotion.title}</h2>
                                 <p className="audition-deadline">{promotion.date}</p>
                             </div>
-                        </Link>
+                       
                         {!isHomePage && (
                             <p>위치: {promotion.location}</p>
                         )}
                     </li>
+                    </Link>
                 ))}
             </ul>
             {!isHomePage && (

@@ -23,17 +23,19 @@ export function AuditionsAnnouncements({ isHomePage }) {
         </h1>
         <ul className="auditions-list">
             {displayedAuditions.map(audition => (
-                <li key={audition.id} className="audition-item">
-                    <Link to={`/auditions/${audition.id}`} className="audition-link">
+                 <Link to={`/auditions/${audition.id}`} key={audition.id} className="audition-link">
+                <li  className="audition-item">
+                   
                         <div className="audition-header">
                             <h2 className="audition-title">{audition.title}</h2>
                             <p className="audition-deadline">마감일: {audition.date}</p>
                         </div>
-                    </Link>
+                 
                     {!isHomePage && (
                         <p>위치: {audition.location}</p>
                     )}
                 </li>
+                </Link>
             ))}
         </ul>
         {!isHomePage && (
