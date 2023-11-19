@@ -7,8 +7,41 @@ import { FreePage } from './page/FreePage.jsx';
 import { PromotionPage } from './page/PromotionPage.jsx';
 
 const Banner = () => (
-  <div className="banner" style={{ width: '100%' }}> 
-    <img src="/banner.png" alt="Banner" style={{ width: '100%', height: 'auto' }} />
+  <div className="banner" style={{ position: 'relative', width: '100%' }}>
+    <img src="/banner2.jpg" alt="Banner" style={{ width: '100%', height: 'auto' }} />
+    <div style={{
+      position: 'absolute',
+      top: '50%', 
+      left: '10%', 
+      transform: 'translateY(-50%)',
+      width: '100%', 
+      padding: '0 20px',
+    }}>
+      <p style={{ 
+        margin: '0 0 10px 0', 
+        color: 'white', 
+        fontSize: '24px', 
+        textAlign: 'left' 
+      }}>
+        지금 차세대 스타가 되어 보세요!
+      </p>
+      <p style={{ 
+        margin: '0 0 10px 0', 
+        color: 'white', 
+        fontSize: '44px', 
+        textAlign: 'left'
+      }}>
+        JYP ONLINE AUDITION
+      </p>
+      <p style={{ 
+        margin: '0', 
+        color: '#009be6',
+        fontSize: '32px', 
+        textAlign: 'left' 
+      }}>
+        Challenge now!
+      </p>
+    </div>
   </div>
 );
 
