@@ -14,7 +14,7 @@ const Banner = () => (
       top: '50%', 
       left: '10%', 
       transform: 'translateY(-50%)',
-      width: '100%', 
+      width: '80%', 
       padding: '0 20px',
     }}>
       <p style={{ 
