@@ -59,58 +59,6 @@ const MiniBanner = () => (
   </div>
 );
 
-const BoardSection = ({ title, feature, posts, deadlines }) => (
-  <div className="board-section" style={{ 
-    background: '#f9f9f9', 
-    padding: '20px', 
-    margin: '10px', 
-    border: '1px solid #ddd', 
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)', 
-    borderRadius: '8px', 
-    width: '30%' 
-  }}>
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'space-between', 
-      alignItems: 'center',
-      marginBottom: '20px', 
-      borderBottom: '1px solid #eee' 
-    }}>
-      <h2 style={{ 
-        fontSize: '1.5em', 
-        fontWeight: 'bold', 
-        color: '#333',
-        margin: 0 
-      }}>{title}</h2>
-      {feature && <span style={{ 
-        fontWeight: 'bold', 
-        color: '#007bff' 
-      }}>{feature}</span>}
-    </div>
-    <ul>
-      {posts.map((post, index) => (
-        <li key={index} style={{ 
-          display: 'flex',
-          justifyContent: 'space-between',
-          padding: '10px 0', 
-          borderBottom: '1px solid #eee' 
-        }}>
-          <span>{post}</span>
-          {deadlines && deadlines[index] && (
-            <span style={{ 
-              marginLeft: 'auto', 
-              paddingLeft: '20px', 
-              borderLeft: '1px solid #ccc' 
-            }}>
-              마감일: {deadlines[index]}
-            </span>
-          )}
-        </li>
-      ))}
-    </ul>
-  </div>
-);
-
 const MessageInbox = () => (
   <div className="message-inbox" style={{
     background: '#ecf5fd', 
